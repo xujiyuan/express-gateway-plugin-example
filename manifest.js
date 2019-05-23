@@ -1,9 +1,10 @@
 module.exports = {
   version: '1.3.0',
   init: function (pluginContext) {
-    pluginContext.registerPolicy(require('./policies/example-policy'));
+    pluginContext.registerPolicy(require('./policies/example'));
     pluginContext.registerCondition(require('./conditions/url-match'));
     pluginContext.registerGatewayRoute(require('./routes/hello-eg'));
+    pluginContext.registerGatewayRoute(require('./routes/oauth'));
     pluginContext.registerAdminRoute(require('./routes/hello-admin'));
 
     pluginContext.eventBus.on('hot-reload', function ({ type, newConfig }) {
@@ -21,6 +22,7 @@ module.exports = {
   },
   policies:['example'], // this is for CLI to automatically add to "policies" whitelist in gateway.config
   schema: {  // This is for CLI to ask about params 'eg plugin configure example'
+    $id: "http://express-gateway.io/models/applications.json",  
     baseUrl: {
       title: 'Base Url',
       description: 'the base url to initialize',

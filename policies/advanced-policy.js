@@ -7,15 +7,8 @@ module.exports = pluginContext => {
       }
     },
     schema: { // This is for Admin API to ask about params
-      type: 'object',
-      properties: {
-        url: {
-          title: 'url',
-          description: 'the url to initialize',
-          type: 'string',
-          required: false
-        }
-      }
+      $id: "http://express-gateway.io/models/applications.json",
+      type: 'object'
     }
   }
 }

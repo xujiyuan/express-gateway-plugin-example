@@ -1,19 +1,12 @@
 module.exports = {
-  name: 'example',
+  name: 'testpolicy',
   policy: (actionParams) => {
     return (req, res, next) => {
       console.log('executing policy example with params', actionParams)
     }
   },
   schema: { // This is for Admin API to validate params
-    type: 'object',
-    properties: {
-      url: {
-        title: 'url',
-        description: 'the url to initialize',
-        type: 'string',
-        required: false
-      }
-    }
+    $id: "http://express-gateway.io/models/applications.json",
+    type: 'object'
   }
 }

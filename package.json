@@ -1,12 +1,12 @@
 {
-  "name": "express-gateway-plugin-example",
-  "version": "1.1.0",
+  "name": "cad-gateway-oauth-plugin",
+  "version": "0.0.1",
   "description": "Plugin Example for Express Gateway",
   "main": "manifest.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jimmy Xu",
   "license": "Apache-2.0",
   "dependencies": {},
   "devDependencies": {
